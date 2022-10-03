@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Student</title>
+</head>
+<body>
+<h2>Add Student</h2>
+<form action="#" th:action="@{/saveStudents}" th:object="${student}" method="post">
+<!-- hidden form field to handle update -->
+<input type="hidden" th:field="*{id}"/>
+First NAme<input type="text" th:field="*{firstName}"/><br/>
+Last Name<input type="text" th:field="*{lastName}"/><br/>
+Email<input type="text" th:field="*{email}"/><br/>
+<input type="submit" value="Submit"/>
+<input type="reset" value="Reset"/>
+</form>
+</body>
+</html>
